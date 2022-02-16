@@ -2,6 +2,8 @@ import altair as alt
 import pandas as pd
 import numpy as np
 from dash import Dash, html, dcc, Input, Output
+
+
 movies = pd.read_json("./data/movies.json")
 
 app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
