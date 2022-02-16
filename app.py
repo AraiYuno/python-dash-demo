@@ -9,13 +9,13 @@ movies = pd.read_json("./data/movies.json")
 app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
 server = app.server
 app.layout = html.Div([
-    "万実がちゃん大好きなレベル",
+    "Movies Vote Average by Different Variables",
     html.Iframe(
         id='scatter',
         style={'border-width': '0', 'width': '100%', 'height': '400px'}),
     dcc.Dropdown(
         id='xcol-widget',
-        value='vote_average',  # REQUIRED to show the plot on the first page load
+        value='runtime',  # REQUIRED to show the plot on the first page load
         options=[{'label': col, 'value': col} for col in movies.select_dtypes(include=np.number).columns]),
     dcc.Dropdown(
         id='colour-widget',
