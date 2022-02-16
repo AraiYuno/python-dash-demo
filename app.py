@@ -35,5 +35,5 @@ def plot_altair(xcol, colour):
         tooltip='vote_average').interactive()
     return chart.to_html()
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     app.run_server(debug=False)
